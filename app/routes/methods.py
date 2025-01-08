@@ -106,15 +106,6 @@ def methods():
                         print("[DEBUG-PROMETHEE-RESULT]:", promethee_result)
                     except Exception as e:
                         return jsonify({"error": f"Napaka pri izvajanju PROMETHEE metode: {str(e)}"}), 400
-                case "VIKOR":
-                    try:
-                        _, _, _, vikor_result = vikor_method(decision_matrix, weights, benefit, strategy_coefficient = 0.5, graph=False, verbose=False)
-                        print("[DEBUG-VIKOR-RESULT]: ", vikor_result)
-                        scores = np.concatenate(vikor_result[:, 1:].reshape(1, -1))
-                        sorted_indices = np.argsort(-scores)                
-                        ranking = [{"company": company_names[idx], "score": round(float(scores[idx]), 2)} for idx in sorted_indices]
-                    except Exception as e:
-                        return jsonify({"error": f"Napaka pri izvajanju VIKOR metode: {str(e)}"}), 400
                 case "MACBETH":
                     try:
                         macbeth_result = macbeth_method(decision_matrix, weights, benefit, graph=False, verbose=False)
