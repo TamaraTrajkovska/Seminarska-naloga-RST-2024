@@ -15,7 +15,7 @@ npm run dev
 
 # FTITS - Multi-Criteria Decision Analysis (MCDA) Application
 
-FTITS is a web-based application for **Multi-Criteria Decision Analysis (MCDA)**. It supports methods like **TOPSIS**, **WSM**, **PROMETHEE**, **VIKOR**, and **MACBETH**, combining a Flask backend with a Preact frontend for seamless decision-making and analysis.
+FTITS is a web-based application for **Multi-Criteria Decision Analysis (MCDA)**. It supports methods like **TOPSIS**, **WSM**, **PROMETHEE**, and **MACBETH**, combining a Flask backend with a Preact frontend for seamless decision-making and analysis.
 
 ---
 
